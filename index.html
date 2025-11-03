@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Artificial Histopedia - learn  about the world's history trough videos, documents, and stories that inspire curiosity and understanding.">
+    content="Artificial Histopedia - learn about the world's history through videos, documents, and stories that inspire curiosity and understanding.">
   <title>ARTIFICIAL HISTOPEDIA - Atish Mondal</title>
- <style>
-   /* ======== RESET ======== */
+  <style>
+    /* ======== RESET ======== */
 * {
   margin: 0;
   padding: 0;
@@ -18,51 +18,55 @@
 
 /* ======== BODY ======== */
 body {
-  background-color: #f7f9fc;
-  color: #333;
+  background-color: #f9fafc;
+  color: #222;
   line-height: 1.6;
 }
 
 /* ======== HEADER ======== */
 header {
+  width: 100%;
+  background: #0d1b2a;
+  color: white;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: #111827;
-  padding: 15px 50px;
-  color: #fff;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 header img {
-  height: 50px;
+  height: 55px;
 }
 
 nav a {
-  color: #f1f1f1;
+  color: #e0e1dd;
   text-decoration: none;
-  margin: 0 12px;
+  margin: 0 15px;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #00c4ff;
+  color: #00b4d8;
 }
 
 /* ======== HERO SECTION ======== */
 .hero {
   position: relative;
   text-align: center;
-  color: #fff;
+  color: white;
   overflow: hidden;
 }
 
 .hero img {
   width: 100%;
-  height: 70vh;
+  height: 85vh;
   object-fit: cover;
-  filter: brightness(0.45);
+  filter: brightness(40%);
 }
 
 .hero h1 {
@@ -70,9 +74,10 @@ nav a:hover {
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 3.5rem;
+  letter-spacing: 2px;
   color: #fff;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
 .hero h4 {
@@ -80,134 +85,132 @@ nav a:hover {
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-weight: 500;
-  font-size: 1.3rem;
-  color: #e0e0e0;
+  font-size: 1.5rem;
+  color: #d4f1f9;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
 /* ======== SEARCH BAR ======== */
 .hero form {
   position: absolute;
-  top: 60%;
+  top: 58%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  background: #fff;
-  border-radius: 30px;
+  width: 60%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
   overflow: hidden;
-  width: 300px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
 }
 
 .hero input[type="search"] {
   flex: 1;
-  padding: 10px 15px;
+  padding: 12px 20px;
   border: none;
   outline: none;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+}
+
+.hero input::placeholder {
+  color: #eee;
 }
 
 .hero button {
-  background-color: #00c4ff;
-  border: none;
+  background: #00b4d8;
   color: white;
-  padding: 10px 20px;
+  border: none;
+  padding: 12px 20px;
   cursor: pointer;
+  font-weight: 600;
   transition: background 0.3s ease;
 }
 
 .hero button:hover {
-  background-color: #007ea7;
+  background: #0096c7;
 }
 
-/* ======== PARAGRAPH SECTION ======== */
-main p {
-  max-width: 900px;
-  margin: 40px auto;
-  text-align: justify;
-  padding: 0 20px;
+/* ======== INTRO PARAGRAPH ======== */
+.hero p {
+  max-width: 800px;
+  margin: 80px auto 20px;
   color: #333;
-  font-size: 1.05rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: justify;
+  background: #ffffffcc;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* ======== CATEGORY MENU ======== */
+/* ======== POPULAR CATEGORIES ======== */
 .categories {
   text-align: center;
-  margin: 40px 0;
+  padding: 60px 20px;
+  background: #e8f1f8;
 }
 
-.categories h3,
 .categories h2 {
-  color: #111827;
-  font-size: 1.8rem;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #0d1b2a;
+  position: relative;
 }
 
-.categories ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  padding: 0;
-}
-
-.categories ul li a {
-  text-decoration: none;
-  background: #00c4ff;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 20px;
-  transition: 0.3s ease;
-}
-
-.categories ul li a:hover {
-  background: #007ea7;
-}
-
-/* ======== CATEGORY GRID ======== */
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  padding: 30px 50px;
+.categories h2::after {
+  content: "";
+  width: 100px;
+  height: 4px;
+  background: #00b4d8;
+  display: block;
+  margin: 10px auto;
+  border-radius: 2px;
 }
 
 .category-card {
+  display: inline-block;
   background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   overflow: hidden;
+  margin: 15px;
+  width: 240px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
 .category-card img {
   width: 100%;
-  height: 180px;
+  height: 160px;
   object-fit: cover;
 }
 
 .category-card h3 {
   padding: 15px;
-  color: #111827;
-  font-size: 1.2rem;
-}
-
-.category-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  font-size: 1.1rem;
+  color: #0d1b2a;
 }
 
 /* ======== FOOTER ======== */
 footer {
-  background-color: #111827;
-  color: #f1f1f1;
+  background: #0d1b2a;
+  color: #e0e1dd;
   text-align: center;
-  padding: 20px;
-  margin-top: 50px;
+  padding: 25px 10px;
+  font-size: 0.9rem;
 }
 
 footer a {
-  color: #00c4ff;
+  color: #00b4d8;
   text-decoration: none;
 }
 
@@ -217,50 +220,41 @@ footer a:hover {
 
 /* ======== RESPONSIVE ======== */
 @media (max-width: 768px) {
-  nav {
-    display: none;
+  header {
     flex-direction: column;
-    width: 100%;
-    background-color: #1e293b;
     text-align: center;
   }
 
-  nav.show {
-    display: flex;
+  nav {
+    margin-top: 10px;
   }
 
-  header {
-    flex-direction: row;
-    justify-content: space-between;
+  .hero h1 {
+    font-size: 2.4rem;
   }
 
-  .menu-toggle {
-    display: block;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1.8rem;
-    cursor: pointer;
+  .hero form {
+    width: 80%;
+  }
+
+  .category-card {
+    width: 90%;
   }
 }
 
-.menu-toggle {
-  display: none;
-}
-
- </style>
+  </style>
 </head>
 
 <body>
 
-  <!-- header area  -->
+  <!-- Header Area -->
   <header>
-    <!-- use logo on left side -->
+    <!-- Logo on left side -->
     <div>
-      <img src="img/AH logo.png" alt="">
+      <img src="img/AH logo.png" alt="Artificial Histopedia Logo">
     </div>
 
-    <!-- nav bar -->
+    <!-- Navigation Bar -->
     <nav>
       <a href="">Home</a>
       <a href="">Articles</a>
@@ -271,74 +265,130 @@ footer a:hover {
     </nav>
   </header>
 
-  <!-- hero sectiom  -->
+  <!-- Hero Section -->
   <main>
-    <section>
-      <!-- use img/AH background.png as background  -->
-      <img src="img/AH background.png" alt="">
+    <section class="hero">
+      <!-- Background Image -->
+      <img src="img/AH background.png" alt="Artificial Histopedia Background">
+
       <h1>Artificial Histopedia</h1>
       <h4>Atish Mondal</h4>
-      <section class="hero">
 
-        <!-- search bar  -->
-        <form>
-          <input type="search" placeholder="Search anything here...">
-          <button type="submit">Search</button>
-        </form>
-      </section>
+      <!-- Search Bar -->
+      <form>
+        <input type="search" placeholder="Search anything here...">
+        <button type="submit">Search</button>
+      </form>
 
-      <!-- paragraph  -->
-      <p>Welcome to Artificial Histopedia — the visionary creation of Atish Mondal.
+      <!-- Introduction Paragraph -->
+      <p>
+        Welcome to <strong>Artificial Histopedia</strong> — the visionary creation of Atish Mondal.
         Here, history is not just told, it is experienced.
         You will uncover timeless knowledge, profound insights, and extraordinary ideas—brought
         to life with breathtaking visuals and a storytelling style that feels both immersive and
         unforgettable.
-
+      </p>
+      <p>
         Every frame is designed to engage your mind, ignite your curiosity, and entertain you
         with a cinematic touch that makes the past feel alive before your eyes.
         Step inside this world of history reimagined, where learning becomes an experience and
         entertainment meets wisdom.
-
-        To witness these remarkable journeys through time, simply click on
-        <a href="https://www.youtube.com/channel/UC8qAzWxBL98VNbpoZuKvsww">Artificial Histopedia </a>
       </p>
+      <p>
+        To witness these remarkable journeys through time, simply click on
+        <a href="https://www.youtube.com/channel/UC8qAzWxBL98VNbpoZuKvsww" target="_blank">Artificial Histopedia</a>.
+      </p>
+    </section>
 
+    <!-- Popular Categories Section -->
+    <section class="categories">
+      <h2>Popular Categories</h2>
 
-      <!-- catagory menu  -->
-      <section class="catagories">
-        <h3>Explore by period</h3>
-        <ul>
-          <li><a href="img/AH background.png">World History</a></li>
-          <li><a href="img/mythology.png">Mythological History</a></li>
-          <li><a href="">Ancient Civilization</a></li>
-          <li><a href="">Ancient Wonder</a></li>
-          <li><a href="">Lost History</a></li>
-          <li><a href="">Modern History</a></li>
-          <li><a href="">Popular History</a></li>
-          <li><a href="">Historical Debates: Proof & Paradox</a></li>
-        </ul>
-      </section>
+        <div class="category-card">
+          <img src="img/AH background.png" alt="World History">
+          <h3>World History</h3>
+        </div>
+
+        <div class="category-card">
+          <img src="img/mythology.png" alt="Mythological History">
+          <h3>Mythological History</h3>
+        </div>
+
+        <div class="category-card">
+          <img src="img/civilization.jpeg" alt="Ancient Civilization">
+          <h3>Ancient Civilization</h3>
+        </div>
+
+        <div class="category-card">
+          <img src="img/wonder.jpeg" alt="Ancient Wonder">
+          <h3>Ancient Wonder</h3>
+        </div>
+
+        <div class="category-card">
+          <img src="img/lost history.jpeg" alt="Lost History">
+          <h3>Lost History</h3>
+        </div>
+
+        <div class="category-card">
+          <img src="img/mordarn.png" alt="Modern History">
+          <h3>Modern History</h3>
+        </div>
+
+        <div class="category-card">
+          <img src="img/popular.png" alt="Popular History">
+          <h3>Popular History</h3>
+        </div>
+
+        <div class="category-card">
+          <img src="img/proof.webp" alt="Historical Debates: Proof & Paradox">
+          <h3>Historical Debates: Proof & Paradox</h3>
+        </div>
+    </section>
   </main>
-  <footer>
-  <p>© 2025 Artificial Histopedia | All Rights Reserved</p>
-  <p><a href="">Privacy Policy</a> | <a href="">Terms of Use</a></p>
-</footer>
-<script>
-  // ======== NAVBAR HAMBURGER MENU ========
-const menuToggle = document.querySelector(".menu-toggle");
-const nav = document.querySelector("nav");
 
-menuToggle.addEventListener("click", () => {
-  nav.classList.toggle("show");
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Artificial Histopedia | All Rights Reserved</p>
+    <p><a href="">Privacy Policy</a> | <a href="">Terms of Use</a></p>
+  </footer>
+<script>
+  // ======== SCROLL ANIMATION FOR HEADER ========
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+  if (window.scrollY > 50) {
+    header.style.background = "#14213d";
+    header.style.boxShadow = "0 4px 15px rgba(0, 0, 0, 0.3)";
+  } else {
+    header.style.background = "#0d1b2a";
+    header.style.boxShadow = "none";
+  }
+});
+
+// ======== SEARCH BAR ANIMATION ========
+const searchForm = document.querySelector(".hero form");
+const searchInput = document.querySelector(".hero input");
+
+searchForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const query = searchInput.value.trim();
+  if (query) {
+    alert(`Searching for: ${query}`);
+  } else {
+    alert("Please type something to search!");
+  }
+});
+
+// ======== CATEGORY CARD HOVER EFFECT (JS Shadow Glow) ========
+document.querySelectorAll(".category-card").forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    card.style.boxShadow = "0 12px 40px rgba(0, 180, 216, 0.5)";
+  });
+  card.addEventListener("mouseleave", () => {
+    card.style.boxShadow = "0 8px 20px rgba(0, 0, 0, 0.15)";
+  });
 });
 
 </script>
 </body>
 
-
 </html>
-
-
-
-
-
