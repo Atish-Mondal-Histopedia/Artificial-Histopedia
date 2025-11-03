@@ -9,239 +9,258 @@
   <title>ARTIFICIAL HISTOPEDIA - Atish Mondal</title>
   <style>
     /* ======== RESET ======== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
 
-/* ======== BODY ======== */
-body {
-  background-color: #f9fafc;
-  color: #222;
-  line-height: 1.6;
-}
+    /* ======== BODY ======== */
+    body {
+      background-color: #f9fafc;
+      color: #222;
+      line-height: 1.6;
+    }
 
-/* ======== HEADER ======== */
-header {
-  width: 100%;
-  background: #0d1b2a;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 40px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
+    /* ======== HEADER ======== */
+    header {
+      width: 100%;
+      background: #0d1b2a;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
 
-header img {
-  height: 55px;
-}
+    header img {
+      height: 55px;
+    }
 
-nav a {
-  color: #e0e1dd;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
+    /* ======== NAVIGATION ======== */
+    nav {
+      display: flex;
+      align-items: center;
+    }
 
-nav a:hover {
-  color: #00b4d8;
-}
+    nav a {
+      color: #e0e1dd;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
 
-/* ======== HERO SECTION ======== */
-.hero {
-  position: relative;
-  text-align: center;
-  color: white;
-  overflow: hidden;
-}
+    nav a:hover {
+      color: #00b4d8;
+    }
 
-.hero img {
-  width: 100%;
-  height: 85vh;
-  object-fit: cover;
-  filter: brightness(40%);
-}
+    /* ======== MENU BUTTON (MOBILE) ======== */
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
 
-.hero h1 {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3.5rem;
-  letter-spacing: 2px;
-  color: #fff;
-  text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-}
+    /* ======== HERO SECTION ======== */
+    .hero {
+      position: relative;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
 
-.hero h4 {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1.5rem;
-  color: #d4f1f9;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-}
+    .hero img {
+      width: 100%;
+      height: 85vh;
+      object-fit: cover;
+      filter: brightness(40%);
+    }
 
-/* ======== SEARCH BAR ======== */
-.hero form {
-  position: absolute;
-  top: 58%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  width: 60%;
-  max-width: 500px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50px;
-  overflow: hidden;
-  backdrop-filter: blur(6px);
-}
+    .hero h1 {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3.5rem;
+      letter-spacing: 2px;
+      color: #fff;
+      text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    }
 
-.hero input[type="search"] {
-  flex: 1;
-  padding: 12px 20px;
-  border: none;
-  outline: none;
-  background: transparent;
-  color: white;
-  font-size: 1rem;
-}
+    .hero h4 {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.5rem;
+      color: #d4f1f9;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    }
 
-.hero input::placeholder {
-  color: #eee;
-}
+    .hero form {
+      position: absolute;
+      top: 58%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      width: 60%;
+      max-width: 500px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50px;
+      overflow: hidden;
+      backdrop-filter: blur(6px);
+    }
 
-.hero button {
-  background: #00b4d8;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background 0.3s ease;
-}
+    .hero input[type="search"] {
+      flex: 1;
+      padding: 12px 20px;
+      border: none;
+      outline: none;
+      background: transparent;
+      color: white;
+      font-size: 1rem;
+    }
 
-.hero button:hover {
-  background: #0096c7;
-}
+    .hero input::placeholder {
+      color: #eee;
+    }
 
-/* ======== INTRO PARAGRAPH ======== */
-.hero p {
-  max-width: 800px;
-  margin: 80px auto 20px;
-  color: #333;
-  font-size: 1rem;
-  line-height: 1.8;
-  text-align: justify;
-  background: #ffffffcc;
-  padding: 20px 25px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-}
+    .hero button {
+      background: #00b4d8;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
 
-/* ======== POPULAR CATEGORIES ======== */
-.categories {
-  text-align: center;
-  padding: 60px 20px;
-  background: #e8f1f8;
-}
+    .hero button:hover {
+      background: #0096c7;
+    }
 
-.categories h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: #0d1b2a;
-  position: relative;
-}
+    .hero p {
+      max-width: 800px;
+      margin: 80px auto 20px;
+      color: #333;
+      font-size: 1rem;
+      line-height: 1.8;
+      text-align: justify;
+      background: #ffffffcc;
+      padding: 20px 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
 
-.categories h2::after {
-  content: "";
-  width: 100px;
-  height: 4px;
-  background: #00b4d8;
-  display: block;
-  margin: 10px auto;
-  border-radius: 2px;
-}
+    /* ======== POPULAR CATEGORIES ======== */
+    .categories {
+      text-align: center;
+      padding: 60px 20px;
+      background: #e8f1f8;
+    }
 
-.category-card {
-  display: inline-block;
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-  margin: 15px;
-  width: 240px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: pointer;
-}
+    .categories h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #0d1b2a;
+      position: relative;
+    }
 
-.category-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-}
+    .categories h2::after {
+      content: "";
+      width: 100px;
+      height: 4px;
+      background: #00b4d8;
+      display: block;
+      margin: 10px auto;
+      border-radius: 2px;
+    }
 
-.category-card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-}
+    .category-card {
+      display: inline-block;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      margin: 15px;
+      width: 240px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+    }
 
-.category-card h3 {
-  padding: 15px;
-  font-size: 1.1rem;
-  color: #0d1b2a;
-}
+    .category-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    }
 
-/* ======== FOOTER ======== */
-footer {
-  background: #0d1b2a;
-  color: #e0e1dd;
-  text-align: center;
-  padding: 25px 10px;
-  font-size: 0.9rem;
-}
+    .category-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
 
-footer a {
-  color: #00b4d8;
-  text-decoration: none;
-}
+    .category-card h3 {
+      padding: 15px;
+      font-size: 1.1rem;
+      color: #0d1b2a;
+    }
 
-footer a:hover {
-  text-decoration: underline;
-}
+    /* ======== FOOTER ======== */
+    footer {
+      background: #0d1b2a;
+      color: #e0e1dd;
+      text-align: center;
+      padding: 25px 10px;
+      font-size: 0.9rem;
+    }
 
-/* ======== RESPONSIVE ======== */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
+    footer a {
+      color: #00b4d8;
+      text-decoration: none;
+    }
 
-  nav {
-    margin-top: 10px;
-  }
+    footer a:hover {
+      text-decoration: underline;
+    }
 
-  .hero h1 {
-    font-size: 2.4rem;
-  }
+    /* ======== RESPONSIVE ======== */
+    @media (max-width: 768px) {
+      header {
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 15px 20px;
+      }
 
-  .hero form {
-    width: 80%;
-  }
+      nav {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        background: #0d1b2a;
+        margin-top: 10px;
+      }
 
-  .category-card {
-    width: 90%;
-  }
-}
+      nav.show {
+        display: flex;
+      }
 
+      nav a {
+        padding: 12px 0;
+        border-top: 1px solid #1b263b;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
   </style>
 </head>
 
@@ -249,53 +268,46 @@ footer a:hover {
 
   <!-- Header Area -->
   <header>
-    <!-- Logo on left side -->
     <div>
       <img src="img/AH logo.png" alt="Artificial Histopedia Logo">
     </div>
 
+    <!-- Menu Button -->
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+
     <!-- Navigation Bar -->
-    <nav>
-      <a href="">Home</a>
-      <a href="">Articles</a>
-      <a href="">Documents</a>
-      <a href="">Discoveries</a>
-      <a href="">Books</a>
-      <a href="">Videos</a>
+    <nav id="nav-menu">
+      <a href="#">Home</a>
+      <a href="#">Articles</a>
+      <a href="#">Documents</a>
+      <a href="#">Discoveries</a>
+      <a href="#">Books</a>
+      <a href="#">Videos</a>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <main>
     <section class="hero">
-      <!-- Background Image -->
       <img src="img/AH background.png" alt="Artificial Histopedia Background">
-
       <h1>Artificial Histopedia</h1>
       <h4>Atish Mondal</h4>
 
-      <!-- Search Bar -->
       <form>
         <input type="search" placeholder="Search anything here...">
         <button type="submit">Search</button>
       </form>
 
-      <!-- Introduction Paragraph -->
       <p>
         Welcome to <strong>Artificial Histopedia</strong> — the visionary creation of Atish Mondal.
         Here, history is not just told, it is experienced.
-        You will uncover timeless knowledge, profound insights, and extraordinary ideas—brought
-        to life with breathtaking visuals and a storytelling style that feels both immersive and
-        unforgettable.
       </p>
       <p>
         Every frame is designed to engage your mind, ignite your curiosity, and entertain you
         with a cinematic touch that makes the past feel alive before your eyes.
-        Step inside this world of history reimagined, where learning becomes an experience and
-        entertainment meets wisdom.
       </p>
       <p>
-        To witness these remarkable journeys through time, simply click on
+        To witness these remarkable journeys through time, click on
         <a href="https://www.youtube.com/channel/UC8qAzWxBL98VNbpoZuKvsww" target="_blank">Artificial Histopedia</a>.
       </p>
     </section>
@@ -303,46 +315,18 @@ footer a:hover {
     <!-- Popular Categories Section -->
     <section class="categories">
       <h2>Popular Categories</h2>
-
-        <div class="category-card">
-          <img src="img/AH background.png" alt="World History">
-          <h3>World History</h3>
-        </div>
-
-        <div class="category-card">
-          <img src="img/mythology.png" alt="Mythological History">
-          <h3>Mythological History</h3>
-        </div>
-
-        <div class="category-card">
-          <img src="img/civilization.jpeg" alt="Ancient Civilization">
-          <h3>Ancient Civilization</h3>
-        </div>
-
-        <div class="category-card">
-          <img src="img/wonder.jpeg" alt="Ancient Wonder">
-          <h3>Ancient Wonder</h3>
-        </div>
-
-        <div class="category-card">
-          <img src="img/lost history.jpeg" alt="Lost History">
-          <h3>Lost History</h3>
-        </div>
-
-        <div class="category-card">
-          <img src="img/mordarn.png" alt="Modern History">
-          <h3>Modern History</h3>
-        </div>
-
-        <div class="category-card">
-          <img src="img/popular.png" alt="Popular History">
-          <h3>Popular History</h3>
-        </div>
-
-        <div class="category-card">
-          <img src="img/proof.webp" alt="Historical Debates: Proof & Paradox">
-          <h3>Historical Debates: Proof & Paradox</h3>
-        </div>
+      <div class="category-card">
+        <img src="img/AH background.png" alt="World History">
+        <h3>World History</h3>
+      </div>
+      <div class="category-card">
+        <img src="img/mythology.png" alt="Mythological History">
+        <h3>Mythological History</h3>
+      </div>
+      <div class="category-card">
+        <img src="img/civilization.jpeg" alt="Ancient Civilization">
+        <h3>Ancient Civilization</h3>
+      </div>
     </section>
   </main>
 
@@ -351,44 +335,29 @@ footer a:hover {
     <p>© 2025 Artificial Histopedia | All Rights Reserved</p>
     <p><a href="">Privacy Policy</a> | <a href="">Terms of Use</a></p>
   </footer>
-<script>
-  // ======== SCROLL ANIMATION FOR HEADER ========
-window.addEventListener("scroll", () => {
-  const header = document.querySelector("header");
-  if (window.scrollY > 50) {
-    header.style.background = "#14213d";
-    header.style.boxShadow = "0 4px 15px rgba(0, 0, 0, 0.3)";
-  } else {
-    header.style.background = "#0d1b2a";
-    header.style.boxShadow = "none";
-  }
-});
 
-// ======== SEARCH BAR ANIMATION ========
-const searchForm = document.querySelector(".hero form");
-const searchInput = document.querySelector(".hero input");
+  <script>
+    // ======== HEADER COLOR CHANGE ON SCROLL ========
+    window.addEventListener("scroll", () => {
+      const header = document.querySelector("header");
+      if (window.scrollY > 50) {
+        header.style.background = "#14213d";
+        header.style.boxShadow = "0 4px 15px rgba(0, 0, 0, 0.3)";
+      } else {
+        header.style.background = "#0d1b2a";
+        header.style.boxShadow = "none";
+      }
+    });
 
-searchForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const query = searchInput.value.trim();
-  if (query) {
-    alert(`Searching for: ${query}`);
-  } else {
-    alert("Please type something to search!");
-  }
-});
+    // ======== MOBILE MENU TOGGLE ========
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
 
-// ======== CATEGORY CARD HOVER EFFECT (JS Shadow Glow) ========
-document.querySelectorAll(".category-card").forEach((card) => {
-  card.addEventListener("mouseenter", () => {
-    card.style.boxShadow = "0 12px 40px rgba(0, 180, 216, 0.5)";
-  });
-  card.addEventListener("mouseleave", () => {
-    card.style.boxShadow = "0 8px 20px rgba(0, 0, 0, 0.15)";
-  });
-});
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
+  </script>
 
-</script>
 </body>
 
 </html>
