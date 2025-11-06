@@ -7,102 +7,125 @@
   <meta name="description"
     content="Artificial Histopedia - learn about the world's history through videos, documents, and stories that inspire curiosity and understanding.">
   <title>ARTIFICIAL HISTOPEDIA - Atish Mondal</title>
-<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 
 <body>
 
-  <!-- Header -->
+  <!-- Header Area -->
   <header>
-    <div><img src="img/AH logo.png" alt="Artificial Histopedia Logo"></div>
+    <div class="logo">
+      <img src="img/AH logo.png" alt="Artificial Histopedia Logo">
+    </div>
+
+    <button class="menu-toggle">☰</button>
+
+    <!-- Navigation Bar -->
     <nav>
-      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-      <div class="nav-links">
-        <a href="">Home</a>
-        <a href="">Articles</a>
-        <a href="">Documents</a>
-        <a href="">Discoveries</a>
-        <a href="">Books</a>
-        <a href="">Videos</a>
-      </div>
+      <a href="#">Home</a>
+      <a href="#">Articles</a>
+      <a href="#">Documents</a>
+      <a href="#">Discoveries</a>
+      <a href="#">Books</a>
+      <a href="#">Videos</a>
     </nav>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <img src="img/AH background.png" alt="Artificial Histopedia Background">
+  <main>
+    <section class="hero">
+      <img src="img/AH background.png" alt="Artificial Histopedia Background">
 
-    <div class="hero-content">
-      <h1>Artificial Histopedia</h1>
-      <h4>Atish Mondal</h4>
+      <div class="hero-content">
+        <h1>Artificial Histopedia</h1>
+        <h4>Atish Mondal</h4>
 
-      <!-- Search Bar -->
-      <form class="search-bar" id="searchForm">
-        <input type="search" id="searchInput" placeholder="Search anything here...">
-        <button type="submit">Search</button>
-      </form>
-    </div>
-  </section>
+        <form>
+          <input type="search" placeholder="Search anything here...">
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </section>
 
-  <!-- Categories -->
-  <section class="categories">
-    <h2>Popular Categories</h2>
+    <!-- Intro Paragraph -->
+    <section class="intro">
+      <p>
+        Welcome to <strong>Artificial Histopedia</strong> — the visionary creation of Atish Mondal.
+        Here, history is not just told, it is experienced.
+        You will uncover timeless knowledge, profound insights, and extraordinary ideas—brought
+        to life with breathtaking visuals and a storytelling style that feels both immersive and
+        unforgettable.
+      </p>
+      <p>
+        Every frame is designed to engage your mind, ignite your curiosity, and entertain you
+        with a cinematic touch that makes the past feel alive before your eyes.
+        Step inside this world of history reimagined, where learning becomes an experience and
+        entertainment meets wisdom.
+      </p>
+      <p>
+        To witness these remarkable journeys through time, simply click on
+        <a href="https://www.youtube.com/channel/UC8qAzWxBL98VNbpoZuKvsww" target="_blank" rel="noopener">Artificial
+          Histopedia</a>.
+      </p>
+    </section>
 
-    <div class="category-card">
-      <img src="img/AH background.png" alt="World History">
-      <h3>World History</h3>
-    </div>
+    <!-- Popular Categories Section -->
+    <section class="categories">
+      <h2>Popular Categories</h2>
+      <div class="underline"></div>
 
-    <div class="category-card">
-      <img src="img/mythology.png" alt="Mythological History">
-      <h3>Mythological History</h3>
-    </div>
+      <div class="category-grid">
+        <div class="category-card">
+          <img src="img/AH background.png" alt="World History">
+          <h3>World History</h3>
+        </div>
 
-    <div class="category-card">
-      <img src="img/civilization.jpeg" alt="Ancient Civilization">
-      <h3>Ancient Civilization</h3>
-    </div>
+        <div class="category-card">
+          <img src="img/mythology.png" alt="Mythological History">
+          <h3>Mythological History</h3>
+        </div>
 
-    <div class="category-card">
-      <img src="img/wonder.jpeg" alt="Ancient Wonder">
-      <h3>Ancient Wonder</h3>
-    </div>
+        <div class="category-card">
+          <img src="img/civilization.jpeg" alt="Ancient Civilization">
+          <h3>Ancient Civilization</h3>
+        </div>
 
-    <div class="category-card">
-      <img src="img/lost history.jpeg" alt="Lost History">
-      <h3>Lost History</h3>
-    </div>
+        <div class="category-card">
+          <img src="img/wonder.jpeg" alt="Ancient Wonder">
+          <h3>Ancient Wonder</h3>
+        </div>
 
-    <div class="category-card">
-      <img src="img/mordarn.png" alt="Modern History">
-      <h3>Modern History</h3>
-    </div>
+        <div class="category-card">
+          <img src="img/lost history.jpeg" alt="Lost History">
+          <h3>Lost History</h3>
+        </div>
 
-    <div class="category-card">
-      <img src="img/popular.png" alt="Popular History">
-      <h3>Popular History</h3>
-    </div>
+        <div class="category-card">
+          <img src="img/mordarn.png" alt="Modern History">
+          <h3>Modern History</h3>
+        </div>
 
-    <div class="category-card">
-      <img src="img/proof.webp" alt="Historical Debates: Proof & Paradox">
-      <h3>Historical Debates: Proof & Paradox</h3>
-    </div>
-  </section>
+        <div class="category-card">
+          <img src="img/popular.png" alt="Popular History">
+          <h3>Popular History</h3>
+        </div>
+
+        <div class="category-card">
+          <img src="img/proof.webp" alt="Historical Debates: Proof & Paradox">
+          <h3>Historical Debates: Proof & Paradox</h3>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer>
     <p>© 2025 Artificial Histopedia | All Rights Reserved</p>
-    <p><a href="">Privacy Policy</a> | <a href="">Terms of Use</a></p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
   </footer>
+
   <script src="js/script.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
